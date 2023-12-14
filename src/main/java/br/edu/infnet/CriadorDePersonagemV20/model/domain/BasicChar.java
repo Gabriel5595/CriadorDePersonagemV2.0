@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TPersonagemBasico")
+@Table(name = "TBasicChar")
 public class BasicChar {
 	
 	@Id
@@ -18,14 +18,14 @@ public class BasicChar {
 	private String nomePersonagem;
 	private int level;
 	
+	
+	
 	@Override
 	public String toString() {
-		return "\nDados Básicos do Personagem\n" +
-				"Nome do Jogador: "+ getNomeJogador() + "\n" +
-				"Nome do Personagem: " + getNomePersonagem() + "\n" +
-				"Nível: " + getLevel() + ".\n";
+		return "BasicChar [id=" + id + ", nomeJogador=" + nomeJogador + ", nomePersonagem=" + nomePersonagem
+				+ ", level=" + level + "]";
 	}
-	
+
 	public BasicChar() {}
 	
 	public BasicChar(Integer id) {

@@ -1,0 +1,4 @@
+Corda de Cânhamo;1
+Mochila;1;
+Tochas;10
+Racao;30

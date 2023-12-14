@@ -1,6 +1,7 @@
 package br.edu.infnet.CriadorDePersonagemV20.model.service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,10 @@ public class BasicCharService {
 	
 	public Collection<BasicChar> pullList(){
 		return(Collection<BasicChar>) basicCharRepository.findAll();
+	}
+	
+	public Optional<BasicChar> pull(Integer id){
+		Optional<BasicChar> basicCharPulled = basicCharRepository.findById(id);
+		return basicCharPulled;
 	}
 }

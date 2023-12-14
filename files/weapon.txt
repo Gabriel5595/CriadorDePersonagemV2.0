@@ -1,0 +1,3 @@
+Adaga;Simples;1d4;Perfurante;Corpo-a-corpo
+Arco Longo;Marcial;1d8;Perfurante;Distancia
+Espada Curta;Marcial;1d6;Perfurante;Corpo-a-corpo

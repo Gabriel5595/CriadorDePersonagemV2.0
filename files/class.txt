@@ -1,0 +1,3 @@
+Patrulheiro;1d10
+Ladino;1d8
+Guerreiro;1d10

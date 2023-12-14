@@ -1,0 +1,3 @@
+Cota de Malha;Pesada;16;15;true
+Couro;Leve;11;0;false
+Gibao de Peles;Media;12;0;false
