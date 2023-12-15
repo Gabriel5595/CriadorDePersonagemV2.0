@@ -1,13 +1,9 @@
 package br.edu.infnet.CriadorDePersonagemV20.model.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "TBasicChar")
+@Table(name = "BasicChar")
 public class BasicChar {
 	
 	@Id
@@ -17,6 +13,9 @@ public class BasicChar {
 	private String playerName;
 	private String characterName;
 	private int level;
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "idAddress")
+	private Address address;
 	
 	
 	
@@ -46,11 +45,11 @@ public class BasicChar {
 		this.id = id;
 	}
 
-	public String getNomeJogador() {
+	public String getplayerName() {
 		return playerName;
 	}
 
-	public void setNomeJogador(String nomeJogador) {
+	public void setPlayerName(String nomeJogador) {
 		this.playerName = nomeJogador;
 	}
 
@@ -58,7 +57,7 @@ public class BasicChar {
 		return characterName;
 	}
 
-	public void setNomePersonagem(String nomePersonagem) {
+	public void setCharacterName(String nomePersonagem) {
 		this.characterName = nomePersonagem;
 	}
 
@@ -69,7 +68,12 @@ public class BasicChar {
 	public void setLevel(int level) {
 		this.level = level;
 	}
-	
-	
-	
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 }

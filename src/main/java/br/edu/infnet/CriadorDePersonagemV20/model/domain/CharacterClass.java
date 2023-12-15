@@ -12,7 +12,7 @@ public class CharacterClass {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
     private String className;
     private String lifeDice;
 	
@@ -21,15 +21,19 @@ public class CharacterClass {
     public CharacterClass(Integer id) {
 		this.id = id;
 	}
-    
-    public CharacterClass(Integer id, String className, String lifeDice) {
+
+	public CharacterClass(String className, String lifeDice) {
 		this.className = className;
 		this.lifeDice = lifeDice;
 	}
-    
-    @Override
+
+	@Override
 	public String toString() {
-		return "CharacterClass [id=" + id + ", className=" + className + ", lifeDice=" + lifeDice + "]";
+		return "CharacterClass{" +
+				"id=" + id +
+				", className='" + className + '\'' +
+				", lifeDice='" + lifeDice + '\'' +
+				'}';
 	}
 
 	public Integer getId() {
@@ -49,6 +53,6 @@ public class CharacterClass {
 	}
 	public void setLifeDice(String lifeDice) {
 		this.lifeDice = lifeDice;
-	}   
-    
+	}
+
 }

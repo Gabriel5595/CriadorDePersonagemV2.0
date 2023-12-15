@@ -37,7 +37,29 @@ public class SkillMods {
     public SkillMods(Integer id) {
 		this.id = id;
 	}
-	
+
+	public SkillMods(Integer id, int acrobaticsMod, int animalHandlingMod, int arcanaMod, int athleticsMod, int deceptionMod, int historyMod, int insightMod, int intimidationMod, int investigationMod, int medicineMod, int natureMod, int perceptionMod, int performanceMod, int persuasionMod, int religionMod, int sleightOfHandMod, int stealthMod, int survivalMod) {
+		this.id = id;
+		this.acrobaticsMod = acrobaticsMod;
+		this.animalHandlingMod = animalHandlingMod;
+		this.arcanaMod = arcanaMod;
+		this.athleticsMod = athleticsMod;
+		this.deceptionMod = deceptionMod;
+		this.historyMod = historyMod;
+		this.insightMod = insightMod;
+		this.intimidationMod = intimidationMod;
+		this.investigationMod = investigationMod;
+		this.medicineMod = medicineMod;
+		this.natureMod = natureMod;
+		this.perceptionMod = perceptionMod;
+		this.performanceMod = performanceMod;
+		this.persuasionMod = persuasionMod;
+		this.religionMod = religionMod;
+		this.sleightOfHandMod = sleightOfHandMod;
+		this.stealthMod = stealthMod;
+		this.survivalMod = survivalMod;
+	}
+
 	@Override
 	public String toString() {
 		return "SkillModsController [id=" + id + ", acrobaticsMod=" + acrobaticsMod + ", animalHandlingMod=" + animalHandlingMod
@@ -79,7 +101,7 @@ public class SkillMods {
 		this.id = id;
 	}
 	
-	public int isAcrobaticsMod() {
+	public int getAcrobaticsMod() {
 		return acrobaticsMod;
 	}
 
@@ -91,7 +113,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isAnimalHandlingMod() {
+	public int getAnimalHandlingMod() {
 		return animalHandlingMod;
 	}
 
@@ -103,7 +125,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isArcanaMod() {
+	public int getArcanaMod() {
 		return arcanaMod;
 	}
 
@@ -115,7 +137,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isAthleticsMod() {
+	public int getAthleticsMod() {
 		return athleticsMod;
 	}
 
@@ -127,7 +149,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isDeceptionMod() {
+	public int getDeceptionMod() {
 		return deceptionMod;
 	}
 
@@ -139,7 +161,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isHistoryMod() {
+	public int getHistoryMod() {
 		return historyMod;
 	}
 
@@ -151,7 +173,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isInsightMod() {
+	public int getInsightMod() {
 		return insightMod;
 	}
 
@@ -163,7 +185,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isIntimidationMod() {
+	public int getIntimidationMod() {
 		return intimidationMod;
 	}
 
@@ -175,7 +197,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isInvestigationMod() {
+	public int getInvestigationMod() {
 		return investigationMod;
 	}
 
@@ -187,7 +209,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isMedicineMod() {
+	public int getMedicineMod() {
 		return medicineMod;
 	}
 
@@ -199,7 +221,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isNatureMod() {
+	public int getNatureMod() {
 		return natureMod;
 	}
 
@@ -211,7 +233,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isPerceptionMod() {
+	public int getPerceptionMod() {
 		return perceptionMod;
 	}
 
@@ -223,7 +245,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isPerformanceMod() {
+	public int getPerformanceMod() {
 		return performanceMod;
 	}
 
@@ -235,7 +257,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isPersuasionMod() {
+	public int getPersuasionMod() {
 		return persuasionMod;
 	}
 
@@ -247,7 +269,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isReligionMod() {
+	public int getReligionMod() {
 		return religionMod;
 	}
 
@@ -259,7 +281,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isSleightOfHandMod() {
+	public int getSleightOfHandMod() {
 		return sleightOfHandMod;
 	}
 
@@ -271,7 +293,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isStealthMod() {
+	public int getStealthMod() {
 		return stealthMod;
 	}
 
@@ -283,7 +305,7 @@ public class SkillMods {
 		}
 	}
 
-	public int isSurvivalMod() {
+	public int getSurvivalMod() {
 		return survivalMod;
 	}
 

@@ -1,5 +1,6 @@
 package br.edu.infnet.CriadorDePersonagemV20;
 
+import br.edu.infnet.CriadorDePersonagemV20.model.domain.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -19,10 +20,11 @@ public class BasicCharLoader implements ApplicationRunner{
 	public void run(ApplicationArguments args) throws Exception {
 		BasicChar basicChar = new BasicChar();
 		
-		basicChar.setNomePersonagem("Eldred");
-		basicChar.setNomeJogador("Gabriel");
+		basicChar.setCharacterName("Eldred");
+		basicChar.setPlayerName("Gabriel");
 		basicChar.setLevel(1);
-		
+		basicChar.setAddress(new Address("21321230"));
+
 		basicCharService.add(basicChar);
 	}
 
