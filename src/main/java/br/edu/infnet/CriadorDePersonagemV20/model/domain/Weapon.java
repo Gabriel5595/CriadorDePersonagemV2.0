@@ -6,26 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-@Table(name = "TWeapon")
+@Table(name = "Weapon")
 public class Weapon {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@JsonProperty("Nome")
     public String weaponName;
-    @JsonProperty("Tipo")
     public String weaponType;
-    @JsonProperty("Dados da Arma")
     public String weaponDice;
-    @JsonProperty("Tipo de Dano")
     public String weaponDamage;
-    @JsonProperty("Corpo-a-corpo ou Distância")
     public String meleeOrDistance;
     
     public Weapon() {}

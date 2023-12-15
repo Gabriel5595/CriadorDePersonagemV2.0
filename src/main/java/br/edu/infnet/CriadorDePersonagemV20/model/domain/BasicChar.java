@@ -14,15 +14,15 @@ public class BasicChar {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	private String nomeJogador;
-	private String nomePersonagem;
+	private String playerName;
+	private String characterName;
 	private int level;
 	
 	
 	
 	@Override
 	public String toString() {
-		return "BasicChar [id=" + id + ", nomeJogador=" + nomeJogador + ", nomePersonagem=" + nomePersonagem
+		return "BasicChar [id=" + id + ", playerName=" + playerName + ", characterName=" + characterName
 				+ ", level=" + level + "]";
 	}
 
@@ -32,9 +32,9 @@ public class BasicChar {
 		this.id = id;
 	}
 	
-	public BasicChar (String nomeJogador, String nomePersonagem, int level) {
-		this.nomeJogador = nomeJogador;
-		this.nomePersonagem = nomePersonagem;
+	public BasicChar (String playerName, String characterName, int level) {
+		this.playerName = playerName;
+		this.characterName = characterName;
 		this.level = level;
 	}
 
@@ -47,19 +47,19 @@ public class BasicChar {
 	}
 
 	public String getNomeJogador() {
-		return nomeJogador;
+		return playerName;
 	}
 
 	public void setNomeJogador(String nomeJogador) {
-		this.nomeJogador = nomeJogador;
+		this.playerName = nomeJogador;
 	}
 
 	public String getNomePersonagem() {
-		return nomePersonagem;
+		return characterName;
 	}
 
 	public void setNomePersonagem(String nomePersonagem) {
-		this.nomePersonagem = nomePersonagem;
+		this.characterName = nomePersonagem;
 	}
 
 	public int getLevel() {

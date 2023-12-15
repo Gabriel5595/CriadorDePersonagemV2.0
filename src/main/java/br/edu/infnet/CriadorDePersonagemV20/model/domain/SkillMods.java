@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TSkills_Mods")
+@Table(name = "SkillsMods")
 public class SkillMods {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +40,7 @@ public class SkillMods {
 	
 	@Override
 	public String toString() {
-		return "SkillMods [id=" + id + ", acrobaticsMod=" + acrobaticsMod + ", animalHandlingMod=" + animalHandlingMod
+		return "SkillModsController [id=" + id + ", acrobaticsMod=" + acrobaticsMod + ", animalHandlingMod=" + animalHandlingMod
 				+ ", arcanaMod=" + arcanaMod + ", athleticsMod=" + athleticsMod + ", deceptionMod=" + deceptionMod
 				+ ", historyMod=" + historyMod + ", insightMod=" + insightMod + ", intimidationMod=" + intimidationMod
 				+ ", investigationMod=" + investigationMod + ", medicineMod=" + medicineMod + ", natureMod=" + natureMod

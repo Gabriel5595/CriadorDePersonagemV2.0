@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TOther_Equips")
+@Table(name = "OtherEquipsController")
 public class OtherEquips {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,7 @@ public class OtherEquips {
 
 	@Override
 	public String toString() {
-		return "OtherEquips [id=" + id + ", equipName=" + equipName + ", amount=" + amount + "]";
+		return "OtherEquipsController [id=" + id + ", equipName=" + equipName + ", amount=" + amount + "]";
 	}
 
 	public Integer getId() {

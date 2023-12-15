@@ -9,6 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.CriadorDePersonagemV20.model.domain.Attributes;
+import br.edu.infnet.CriadorDePersonagemV20.model.domain.BasicChar;
 import br.edu.infnet.CriadorDePersonagemV20.model.service.AttributesService;
 
 @Order(2)
@@ -30,6 +31,10 @@ public class AttributesLoader implements ApplicationRunner{
 		attributes.setCharisma(fullDrawList.get(5));
 		
 		attributes.addAttributeMods();
+		
+		attributes.setBasicChar(new BasicChar(1));
+		
+		System.out.println("O resultado da união das tabelas é: " + attributes);
 		
 		attributesService.add(attributes);
 	}

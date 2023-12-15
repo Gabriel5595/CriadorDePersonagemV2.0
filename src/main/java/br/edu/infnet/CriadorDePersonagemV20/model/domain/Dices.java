@@ -37,7 +37,7 @@ public class Dices {
 
     // Métodos para rolar dados de 100 lados
     public static int rollD100() {
-        return rollDices(20);
+        return rollDices(100);
     }
 
     // Método genérico para rolar dados de n lados

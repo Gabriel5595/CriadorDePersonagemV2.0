@@ -4,14 +4,17 @@ import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TAttributes")
+@Table(name = "Attributes")
 public class Attributes {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +32,9 @@ public class Attributes {
     private int modWis;
     private int charisma;
     private int modChar;
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "idBasic_Char")
+    private BasicChar basicChar;
     
     public Attributes() {}
 	
@@ -50,7 +56,7 @@ public class Attributes {
 		return "Attributes [id=" + id + ", stregth=" + stregth + ", modStr=" + modStr + ", dexterity=" + dexterity
 				+ ", modDex=" + modDex + ", constitution=" + constitution + ", modConst=" + modConst + ", intelligence="
 				+ intelligence + ", modInt=" + modInt + ", wisdom=" + wisdom + ", modWis=" + modWis + ", charisma="
-				+ charisma + ", modChar=" + modChar + "]";
+				+ charisma + ", modChar=" + modChar + ", BasicChar=" + basicChar + "]";
 	}
 
 	private int calculateMod(int attributeValue) {
@@ -217,8 +223,13 @@ public class Attributes {
 	public void setModChar(int modChar) {
 		this.modChar = modChar;
 	}
-    
-	
-    
+
+	public BasicChar getBasicChar() {
+		return basicChar;
+	}
+
+	public void setBasicChar(BasicChar basicChar) {
+		this.basicChar = basicChar;
+	}  
     
 }

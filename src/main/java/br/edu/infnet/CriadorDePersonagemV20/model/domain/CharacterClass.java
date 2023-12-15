@@ -6,20 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-@Table(name = "TClass")
+@Table(name = "Class")
 public class CharacterClass {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@JsonProperty("Nome")
     private String className;
-    @JsonProperty("Dado de Vida")
     private String lifeDice;
 	
     public CharacterClass() {}
